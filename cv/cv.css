@@ -32,14 +32,15 @@ body {
 .profile .imgbx img {
     width: 250px;
     padding: 2%;
-    height: 250px;
+    height: 260px;
     border-radius: 50%;
-    background: #fff;
+   
     border: 16px solid rgba(5, 2, 20, 0.429);
     margin-bottom: 25px;
     position: relative;
     z-index: 1;
     box-shadow: 11px 10px 110px;
+    object-fit: cover;
 }
 
 .profile h3 {
@@ -63,8 +64,21 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+       text-decoration: none;
+      
 }
-
+.contact_info ul li span a {
+   
+       text-decoration: none;
+       color: #fff;
+      
+}
+.contact_info ul li span a:hover {
+   
+       text-decoration: underline;
+       color: #fff;
+      
+}
 .contact_info ul li .icon {
     width: 30px;
     height: 30px;
@@ -118,6 +132,7 @@ body {
     display: block;
     font-size: 14px;
     color: #777;
+ 
 }
 
 .right_side .section .item p {
@@ -162,11 +177,12 @@ body {
 
     .contact_info ul li .icon {
         margin-right: 0;
-        margin-bottom: 5px;
+        margin-bottom: 5px;   
     }
 
     .skills ul li, .languages ul li {
         text-align: center;
+      
     }
 }
 
