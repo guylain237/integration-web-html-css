@@ -25,13 +25,12 @@ main{
     padding: 20px;
     
 }
-header{
+header {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     background-color: transparent;
-    
 }
 header img{
     height: 100px;
@@ -179,102 +178,108 @@ footer .content{
     grid-column: 5 / 7;
 }
 
-@media screen and (max-width: 1023px){
-    header img{
-        height: 2em;
+
+@media screen and (max-width: 1023px) {
+    header img {
+        height: 3em;
+        width: auto;
     }
-    .describe .content h1{
+
+    .describe .content h1 {
         font-size: 12em;
     }
-    .describe .content .right{
+
+    .describe .content .right {
         transform: none;
     }
-    .grid-2 div:nth-child(1){
+
+    .grid-2 div:nth-child(1) {
         grid-row: 2;
     }
-    .grid-2 div:nth-child(3){
+
+    .grid-2 div:nth-child(3) {
         grid-row: 6;
     }
-    .grid-2 div:nth-child(4){
+
+    .grid-2 div:nth-child(4) {
         grid-row: 5;
     }
-    .grid-3{
+
+    .grid-3 {
         font-size: 5em;
         line-height: 1em;
     }
-}
-@media screen and (max-width: 1023px){
-    header img{
-        height: unset;
-        width: 100%;
+
+    .grid {
+        display: block;
     }
-    .describe .content h1{
-        font-size: 7em;
-    }
-    .describe .content{
+
+    .describe {
         text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    .describe{
         overflow: hidden;
     }
-    .grid-1 h2:nth-child(3){
+
+    .describe .content {
+        flex-direction: column;
+    }
+
+    .grid-1 h2:nth-child(3) {
         font-size: 3em;
     }
-    .grid{
-        display: block;
-    }
-    .grid-3{
+
+    .grid-3 {
         font-size: 4em;
         display: block;
         margin-bottom: 100px;
     }
 }
 
-.autoRotate{
-    animation: autoRotateAnimation;
-    animation-timeline: view();
+.autoRotate {
+    animation: autoRotateAnimation 10s linear infinite;
 }
-@keyframes autoRotateAnimation{
-    from{
+
+@keyframes autoRotateAnimation {
+    from {
         transform: rotate(0deg);
     }
-    to{
+    to {
         transform: rotate(360deg);
     }
 }
-.autoShow{
-    animation: autoShowAnimation both;
-    animation-timeline: view(70% 5%);
 
+.autoShow {
+    animation: autoShowAnimation 1s both;
 }
-@keyframes autoShowAnimation{
-    from{
+
+@keyframes autoShowAnimation {
+    from {
         opacity: 0;
         transform: translateY(200px) scale(0.3);
-    }to{
+    }
+    to {
         opacity: 1;
         transform: translateY(0) scale(1);
     }
 }
-.autoBLur{
-    animation: autoBLurAnimation linear both;
-    animation-timeline: view();
-}
-@keyframes autoBLurAnimation{
-    0%{
-        filter: blur(40px);
-    }
-    45%, 55%{
-        filter: blur(0px);
-    }
-    100%{
-        filter: blur(40px);
-    }
+
+.autoBLur {
+    animation: autoBLurAnimation 3s linear both;
 }
 
+@keyframes autoBLurAnimation {
+    0% {
+        filter: blur(40px);
+    }
+    45%, 55% {
+        filter: blur(0px);
+    }
+    100% {
+        filter: blur(40px);
+    }
+}
 /* css tech */
 
 .banner{
